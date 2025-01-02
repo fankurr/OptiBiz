@@ -1,0 +1,312 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        OptiBiz
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-200">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 rounded-full mx-auto my-4 px-6 py-5 flex items-center justify-between max-w-7xl">
+        <div class="flex items-center space-x-2">
+            <div class="bg-blue-600 p-2 rounded-md">
+                <i class="fas fa-project-diagram text-white"></i>
+            </div>
+            <a class="text-white font-semibold" href="/index.html">OptiBiz</a>
+        </div>
+        <div class="hidden md:flex space-x-6 text-gray-400">
+            <a href="/explore.html" class="hover:text-white">Eksplore</a>
+            <a href="/service.html" class="hover:text-white">Layanan</a>
+            <a href="/about.html" class="hover:text-white">Tentang</a>
+            <div class="relative">
+                <script>
+                    function toggleLoginPopup() {
+                        const popup = document.getElementById("login-popup");
+                        popup.classList.toggle("hidden");
+                    }
+                    function closeLoginPopup(event) {
+                        const popup = document.getElementById("login-popup");
+                        const button = document.querySelector("button[onclick='toggleLoginPopup()']");
+
+                        // Jika klik di luar popup dan bukan pada tombol, sembunyikan popup
+                        if (!popup.contains(event.target) && !button.contains(event.target)) {
+                            popup.classList.add("hidden");
+                        }
+                    }
+
+                    // Tambahkan event listener pada document
+                    document.addEventListener("click", closeLoginPopup);
+                </script>
+                <!-- Foto profil default sebagai menu login jika sudah login-->
+                <!-- <button onclick="toggleLoginPopup()" class="focus:outline-none">
+                        <img src="https://via.placeholder.com/40" alt="Profil"
+                            class="w-10 h-10 rounded-full border-2 border-gray-600 hover:border-white">
+                    </button> -->
+                <button onclick="toggleLoginPopup()" class="hover:text-white">Login</button>
+
+                <!-- Popup Login -->
+                <div id="login-popup" class="z-50 hidden absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-lg font-semibold text-gray-700">Login</h2>
+                    <form action="/login" method="POST" class="mt-4">
+                        <div class="mb-4">
+                            <label for="usernameOrEmail" class="block text-gray-600">Username/Email</label>
+                            <input type="text" id="usernameOrEmail" name="usernameOrEmail" required
+                                class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="block text-gray-600">Password</label>
+                            <input type="password" id="password" name="password" required
+                                class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none">
+                                Login
+                            </button>
+                            <a href="/register" class="text-blue-600 hover:underline">Register</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative">
+        <img alt="Code on a computer screen" class="w-full h-96 object-cover" height="600"
+            src="https://storage.googleapis.com/a1aa/image/DvzdZUg6KMKdBVHp7lvfyEleaArBBidSPCA1jEwzWff0fwpeE.jpg"
+            width="1920" />
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl font-bold">
+                    OPTIMALKAN BISNIS
+                </h1>
+                <h2 class="text-2xl">
+                    MAKSIMALKAN POTENSI
+                </h2>
+            </div>
+        </div>
+    </section>
+    <!-- Introduction Section -->
+    <section class="py-12 text-center">
+        <h2 class="text-3xl font-semibold">
+            Konsultan IT
+        </h2>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+            OptiBiz menawarkan layanan Konsultan IT yang dirancang khusus untuk mendukung UMKM dalam menghadapi
+            tantangan digital. Kami memahami pentingnya teknologi untuk meningkatkan efisiensi operasional, keamanan
+            data, dan mengoptimalkan performa bisnis Anda.
+        </p>
+    </section>
+    <!-- Services Section -->
+    <section class="py-12 bg-gray-200">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center mb-8">
+                Layanan
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 max-w-sm">
+                    <img alt="Digital transformation illustration" class="w-full h-48 object-cover rounded-xl"
+                        height="300"
+                        src="https://storage.googleapis.com/a1aa/image/cyd1Zsgfqx2FRKv93qAe5IxHQzJFP4zKPe9HEXYoQrerfwpeE.jpg"
+                        width="400" />
+                    <h3 class="text-xl font-semibold mt-4">
+                        Transformasi Digital
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Kami membantu UMKM membangun dan mengelola toko online di platform marketplace populer seperti
+                        Tokopedia dan Shopee dari A sampai Z:
+                    </p>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>
+                            Pembuatan dan pengaturan toko
+                        </li>
+                        <li>
+                            Optimisasi produk dan deskripsi
+                        </li>
+                        <li>
+                            Pengelolaan inventaris dan harga
+                        </li>
+                        <li>
+                            Integrasi pembayaran dan pengiriman
+                        </li>
+                        <li>
+                            Strategi promosi di marketplace
+                        </li>
+                    </ul>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-xl p-6 max-w-sm">
+                    <img alt="Digital optimization illustration" class="w-full h-48 object-cover rounded-xl"
+                        height="300"
+                        src="https://storage.googleapis.com/a1aa/image/fNWDQlm9L9wVfEBJWPcMCMkz1WJYAUbzgfnu5WJ9zMm4PcqnA.jpg"
+                        width="400" />
+                    <h3 class="text-xl font-semibold mt-4">
+                        Optimisasi Digital
+                    </h3>
+                    <p class="mt-2 text-gray-600">
+                        Kami juga menyediakan layanan pembuatan Website Company Profile yang profesional untuk
+                        meningkatkan kredibilitas bisnis Anda di dunia digital:
+                    </p>
+                    <ul class="mt-2 text-gray-600 list-disc list-inside">
+                        <li>
+                            Menampilkan informasi perusahaan, visi, dan misi secara jelas
+                        </li>
+                        <li>
+                            Menonjolkan produk atau layanan utama
+                        </li>
+                        <li>
+                            Menyertakan portofolio proyek dan testimoni klien
+                        </li>
+                        <li>
+                            SEO-friendly
+                        </li>
+                        <li>
+                            Memperkuat citra dan branding Online
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="bg-gradient-to-r from-gray-700 to-gray-800 text-white p-8 py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-center text-white mb-8">
+                Kontak Pemesanan
+            </h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="name">
+                            Nama/Nama Usaha
+                        </label>
+                        <input class="w-full px-3 py-2 border rounded-lg" id="name" placeholder="Nama/Nama Usaha"
+                            type="text" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="phone">
+                            No. Telepon/Whatsapp
+                        </label>
+                        <input class="w-full px-3 py-2 border rounded-lg" id="phone" placeholder="No. Telepon/Whatsapp"
+                            type="text" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="email">
+                            Email
+                        </label>
+                        <input class="w-full px-3 py-2 border rounded-lg" id="email" placeholder="Email" type="email" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="message">
+                            Pesan
+                        </label>
+                        <textarea class="w-full px-3 py-2 border rounded-lg" id="message" placeholder="Pesan"
+                            rows="4"></textarea>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg" type="submit">
+                        Kirim
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto flex justify-between">
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    Services
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Konsultan IT
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Digital Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Desain Grafis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    About
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Team
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Legacy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    Careers
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Job openings
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Employee success
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Benefits
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto text-center mt-8">
+            <p>
+                Copyright © 2024 OptiBiz
+            </p>
+            <div class="mt-4 space-x-4">
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-twitter">
+                    </i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

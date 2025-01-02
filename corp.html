@@ -1,0 +1,282 @@
+<html lang="en">
+
+<head>
+    <title>OptiBiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="/assets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 rounded-full mx-auto my-4 px-6 py-5 flex items-center justify-between max-w-7xl">
+        <div class="flex items-center space-x-2">
+            <div class="bg-blue-600 p-2 rounded-md">
+                <i class="fas fa-project-diagram text-white"></i>
+            </div>
+            <a class="text-white font-semibold" href="index.html">OptiBiz</a>
+        </div>
+        <div class="hidden md:flex space-x-6 text-gray-400">
+            <a href="explore.html" class="hover:text-white">Eksplore</a>
+            <a href="service.html" class="hover:text-white">Layanan</a>
+            <a href="about.html" class="hover:text-white">Tentang</a>
+            <div class="relative">
+                <script>
+                    function toggleLoginPopup() {
+                        const popup = document.getElementById("login-popup");
+                        popup.classList.toggle("hidden");
+                    }
+                    function closeLoginPopup(event) {
+                        const popup = document.getElementById("login-popup");
+                        const button = document.querySelector("button[onclick='toggleLoginPopup()']");
+
+                        // Jika klik di luar popup dan bukan pada tombol, sembunyikan popup
+                        if (!popup.contains(event.target) && !button.contains(event.target)) {
+                            popup.classList.add("hidden");
+                        }
+                    }
+
+                    // Tambahkan event listener pada document
+                    document.addEventListener("click", closeLoginPopup);
+                </script>
+                <!-- Foto profil default sebagai menu login jika sudah login-->
+                <!-- <button onclick="toggleLoginPopup()" class="focus:outline-none">
+                            <img src="https://via.placeholder.com/40" alt="Profil"
+                                class="w-10 h-10 rounded-full border-2 border-gray-600 hover:border-white">
+                        </button> -->
+                <button onclick="toggleLoginPopup()" class="hover:text-white">Login</button>
+
+                <!-- Popup Login -->
+                <div id="login-popup" class="z-50 hidden absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-lg font-semibold text-gray-700">Login</h2>
+                    <form action="/login" method="POST" class="mt-4">
+                        <div class="mb-4">
+                            <label for="usernameOrEmail" class="block text-gray-600">Username/Email</label>
+                            <input type="text" id="usernameOrEmail" name="usernameOrEmail" required
+                                class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="block text-gray-600">Password</label>
+                            <input type="password" id="password" name="password" required
+                                class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none">
+                                Login
+                            </button>
+                            <a href="/register" class="text-blue-600 hover:underline">Register</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto text-left">
+            <div class="relative">
+                <img alt="Hero Image" class="mx-auto" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/eRMk8Gec7WuLckzwmy8LLDpp1oQPPWEJ6zfJ2y2e9PTIv3UPB.jpg"
+                    width="600" />
+                <div class="absolute inset-y-0 left-0 flex items-center">
+                    <button class="text-blue-500 text-2xl">
+                        <i class="fas fa-chevron-left">
+                        </i>
+                    </button>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center">
+                    <button class="text-blue-500 text-2xl">
+                        <i class="fas fa-chevron-right">
+                        </i>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-4">
+                <span class="inline-block w-2 h-2 bg-blue-500 rounded-full mx-1">
+                </span>
+                <span class="inline-block w-2 h-2 bg-gray-400 rounded-full mx-1">
+                </span>
+                <span class="inline-block w-2 h-2 bg-gray-400 rounded-full mx-1">
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- Company Info Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center">
+                <img alt="Company Logo" class="h-32 w-32" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/kfnQKr0SivT4AiEewbUrBisJ7FfiH3TQVgKXEBv3PsUj3bqnA.jpg"
+                    width="100" />
+            </div>
+            <h1 class="text-4xl font-bold mt-4">
+                Nama Comp
+            </h1>
+            <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut faucibus non urna sed sagittis. Aliquam erat
+                volutpat. Nam rhoncus nisl sit amet turpis sollicitudin, id tempor magna vulputate. Donec vitae
+                tincidunt lectus, non molestie risus. Nulla ultrices cursus massa ut accumsan. Praesent eleifend iaculis
+                nisi, sit amet facilisis lacus laoreet et. Curabitur interdum, enim at tincidunt maximus, arcu mi
+                aliquam dolor, mollis sodales turpis diam sit amet urna.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products and Services Section -->
+    <section class="bg-gray-200 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">
+                Produk dan Layanan
+            </h2>
+            <p class="mt-2 text-gray-600 max-w-xl mx-auto">
+                Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui
+                eget ultrices.
+            </p>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Product Image" class="w-full h-40 object-cover mb-4" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/etd89sM8JVwlcSmN7zrMRjtu8p1gjR018dS7i9zjmy459m6JA.jpg"
+                        width="200" />
+                    <h3 class="text-xl font-bold mb-2">
+                        Lorem libero donec
+                    </h3>
+                    <p class="text-gray-600">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
+                        egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Product Image" class="w-full h-40 object-cover mb-4" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/etd89sM8JVwlcSmN7zrMRjtu8p1gjR018dS7i9zjmy459m6JA.jpg"
+                        width="200" />
+                    <h3 class="text-xl font-bold mb-2">
+                        Lorem libero donec
+                    </h3>
+                    <p class="text-gray-600">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
+                        egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Product Image" class="w-full h-40 object-cover mb-4" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/etd89sM8JVwlcSmN7zrMRjtu8p1gjR018dS7i9zjmy459m6JA.jpg"
+                        width="200" />
+                    <h3 class="text-xl font-bold mb-2">
+                        Lorem libero donec
+                    </h3>
+                    <p class="text-gray-600">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
+                        egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img alt="Product Image" class="w-full h-40 object-cover mb-4" height="150"
+                        src="https://storage.googleapis.com/a1aa/image/etd89sM8JVwlcSmN7zrMRjtu8p1gjR018dS7i9zjmy459m6JA.jpg"
+                        width="200" />
+                    <h3 class="text-xl font-bold mb-2">
+                        Lorem libero donec
+                    </h3>
+                    <p class="text-gray-600">
+                        Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in,
+                        egestas eget quam. Donec id elit non mi porta gravida at eget metus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto flex justify-between">
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    Services
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Konsultan IT
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Digital Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Desain Grafis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    About
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Team
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Legacy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    Careers
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Job openings
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Employee success
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Benefits
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto text-center mt-8">
+            <p>
+                Copyright © 2024 OptiBiz
+            </p>
+            <div class="mt-4 space-x-4">
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-twitter">
+                    </i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

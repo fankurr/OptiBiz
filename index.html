@@ -1,0 +1,365 @@
+<html lang="en">
+
+<head>
+    <title>OptiBiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="/assets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200 pb-16 md:pb-0 lg:pb-0 xl:pb-0">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 sm:hidden fixed bottom-0 left-0 right-0 flex items-center justify-around py-3 md:hidden">
+        <a href="explore.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-search"></i>
+            <span class="text-sm">Eksplore</span>
+        </a>
+        <a href="service.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-tools"></i>
+            <span class="text-sm">Layanan</span>
+        </a>
+        <a href="index.html" class="flex flex-col items-center text-blue-500">
+            <div class="bg-blue-600 p-3 rounded-full">
+                <i class="fas fa-home text-white"></i>
+            </div>
+            <span class="text-sm font-semibold">Home</span>
+        </a>
+        <a href="about.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-info-circle"></i>
+            <span class="text-sm">Tentang</span>
+        </a>
+        <a href="login.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-user"></i>
+            <span class="text-sm">Login</span>
+        </a>
+    </nav>
+
+    <!-- Full Navbar (Visible on medium and larger screens) -->
+    <nav class="hidden md:flex bg-gray-800 rounded-full mx-auto my-4 px-6 py-5 items-center justify-between max-w-7xl">
+        <div class="flex items-center space-x-2">
+            <div class="bg-blue-600 p-2 rounded-md">
+                <i class="fas fa-project-diagram text-white"></i>
+            </div>
+            <a class="text-white font-semibold" href="index.html">OptiBiz</a>
+        </div>
+        <div class="flex space-x-6 text-gray-400">
+            <a href="explore.html" class="hover:text-white">Eksplore</a>
+            <a href="service.html" class="hover:text-white">Layanan</a>
+            <a href="about.html" class="hover:text-white">Tentang</a>
+            <a href="login.html" class="hover:text-white">Login</a>
+        </div>
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <section class="bg-gray-200 pb-6 sm:py-10">
+        <div
+            class="container mx-auto flex flex-col-reverse md:flex-row items-center bg-gray-800 p-4 sm:p-6 md:p-10 md:rounded-2xl lg:rounded-3xl space-y-6 md:space-y-0 md:space-x-6">
+            <!-- Bagian teks -->
+            <div class="text-white text-center md:text-left md:w-1/2 space-y-4 sm:space-y-6">
+                <h1 class="text-lg sm:text-2xl md:text-4xl font-bold leading-tight">
+                    GROW YOUR BUSINESS WITH US
+                </h1>
+                <p class="text-xs sm:text-base md:text-lg">
+                    Optimalkan bisnis anda dengan bantuan teknologi bersama kami.
+                </p>
+                <button
+                    class="bg-blue-500 text-white px-3 py-2 sm:px-5 sm:py-3 rounded-full hover:bg-blue-600 transition duration-300">
+                    Pelajari Lebih..
+                </button>
+            </div>
+            <!-- Bagian gambar -->
+            <div class="md:w-1/2">
+                <img alt="OptiBiz logo" class="mx-auto w-28 sm:w-40 md:w-64 h-auto"
+                    src="assets/img/OptiBiz logo trans.png" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Explore Business Section -->
+    <section class="py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Eksplore Bisnis</h2>
+
+            <!-- Filter Buttons -->
+            <div class="flex overflow-x-auto space-x-4 flex-nowrap justify-center gap-2 mb-10">
+                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+            </div>
+
+
+            <!-- Business Cards -->
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Business Card List -->
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <!-- Tambahkan kartu lainnya di sini... -->
+            </div>
+            <div class="flex items-center justify-center mt-10">
+                <h3 class="text-xl font-bold">
+                    <a href="explore.html" class="text-gray-500 hover:text-gray-700 transition-colors duration-300">
+                        Lainnya
+                    </a>
+                </h3>
+            </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8 hidden sm:block">
+        <div class="container mx-auto flex justify-between">
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    Services
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="service/it-consult.html">
+                            Konsultan IT
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="service/digital-marketing.html">
+                            Digital Marketing
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="service/design.html">
+                            Desain Grafis
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    About
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Company
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Team
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Legacy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">
+                    Careers
+                </h4>
+                <ul>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Job openings
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Employee success
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-white" href="#">
+                            Benefits
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto text-center mt-8">
+            <p>
+                Copyright © 2024 OptiBiz
+            </p>
+            <div class="mt-4 space-x-4">
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-facebook-f">
+                    </i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-twitter">
+                    </i>
+                </a>
+                <a class="text-gray-300 hover:text-white" href="#">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
