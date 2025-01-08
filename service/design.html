@@ -44,6 +44,63 @@
         </a>
     </nav>
 
+    <!-- Back and Share Buttons -->
+    <nav class="bg-gray-800 sm:hidden rounded-full m-3 fixed top-0 left-0 right-0 flex items-center justify-between py-3 px-4 shadow-lg z-50">
+        <!-- Back Button -->
+         <button onclick="goBack()" class="flex items-center text-gray-400 hover:text-white">
+            <i class="fas fa-arrow-left text-xl"></i>
+        </button>
+    
+        <!-- Share Button -->
+         <button onclick="sharePage()" class="flex items-center text-gray-400 hover:text-white">
+             <i class="fas fa-share-alt text-xl"></i>
+         </button>
+         <script>
+             // Function to go back to the previous page
+             function goBack() {
+                 window.history.back();
+             }
+
+             // Function to share the current page
+             function sharePage() {
+                 if (navigator.share) {
+                     navigator.share({
+                         title: document.title,
+                         url: window.location.href
+                     }).then(() => {
+                         console.log('Page shared successfully');
+                     }).catch((error) => {
+                         console.error('Error sharing page:', error);
+                     });
+                 } else {
+                     alert('Share functionality is not supported in this browser.');
+                 }
+             }
+         </script>
+         <script>
+            // Function to go back to the previous page
+            function goBack() {
+                window.history.back();
+            }
+        
+            // Function to share the current page
+            function sharePage() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    }).then(() => {
+                        console.log('Page shared successfully');
+                    }).catch((error) => {
+                        console.error('Error sharing page:', error);
+                    });
+                } else {
+                    alert('Share functionality is not supported in this browser.');
+                }
+            }
+        </script>
+    </nav>
+
     <!-- Full Navbar (Visible on medium and larger screens) -->
     <nav class="hidden md:flex bg-gray-800 rounded-full mx-auto my-4 px-6 py-3 items-center justify-between max-w-7xl">
         <div class="flex items-center">
