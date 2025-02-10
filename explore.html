@@ -11,36 +11,37 @@
 
 <body class="bg-gray-200 pb-16 md:pb-0 lg:pb-0 xl:pb-0">
     <!-- Navbar -->
-    <nav class="bg-gray-800 sm:hidden fixed bottom-0 left-0 right-0 flex items-center justify-around py-3 md:hidden">
+    <nav class="bg-gray-800 m-3 rounded-xl sm:hidden fixed bottom-0 left-0 right-0 flex items-center justify-around py-3 z-50">
         <a href="explore.html" class="flex flex-col items-center text-gray-400 hover:text-white">
             <i class="fas fa-search"></i>
-            <span class="text-sm">Eksplore</span>
+            <span class="text-xs">Eksplore</span>
         </a>
         <a href="service.html" class="flex flex-col items-center text-gray-400 hover:text-white">
             <i class="fas fa-tools"></i>
-            <span class="text-sm">Layanan</span>
+            <span class="text-xs">Layanan</span>
         </a>
         <a href="index.html" class="flex flex-col items-center text-blue-500">
             <div class="bg-blue-600 p-3 rounded-full">
                 <i class="fas fa-home text-white"></i>
             </div>
-            <span class="text-sm font-semibold">Home</span>
+            <span class="text-xs font-semibold">Home</span>
         </a>
         <a href="about.html" class="flex flex-col items-center text-gray-400 hover:text-white">
             <i class="fas fa-info-circle"></i>
-            <span class="text-sm">Tentang</span>
+            <span class="text-xs">Tentang</span>
         </a>
         <a href="login.html" class="flex flex-col items-center text-gray-400 hover:text-white">
             <i class="fas fa-user"></i>
-            <span class="text-sm">Login</span>
+            <span class="text-xs">Login</span>
         </a>
     </nav>
 
     <!-- Full Navbar (Visible on medium and larger screens) -->
-    <nav class="hidden md:flex bg-gray-800 rounded-full mx-auto my-4 px-6 py-5 items-center justify-between max-w-7xl">
-        <div class="flex items-center space-x-2">
-            <div class="bg-blue-600 p-2 rounded-md">
-                <i class="fas fa-project-diagram text-white"></i>
+    <nav class="hidden md:flex bg-gray-800 rounded-full mx-auto my-4 px-6 py-3 items-center justify-between max-w-7xl">
+        <div class="flex items-center">
+            <div class="">
+                <img src="./assets/img/OptiBiz logo pyramid trans.png" class="w-12 h-auto">
+                <!-- <i class="fas fa-project-diagram text-white"></i> -->
             </div>
             <a class="text-white font-semibold" href="index.html">OptiBiz</a>
         </div>
@@ -58,18 +59,59 @@
             <h2 class="text-2xl md:text-3xl font-bold mb-6">Eksplore Bisnis</h2>
 
             <!-- Filter Buttons -->
-            <div class="flex overflow-x-auto space-x-4 flex-nowrap justify-center gap-2 mb-10">
-                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
-                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
-                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
-                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
-                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
-                <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0">Bidang</button>
+             <div class="flex overflow-x-auto space-x-2 flex-nowrap justify-start gap-2 mb-10 p-2">
+                <div class="flex gap-2">
+                    <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0 whitespace-nowrap">Bidang</button>
+                    <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0 whitespace-nowrap">Bidang</button>
+                    <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0 whitespace-nowrap">Bidang</button>
+                    <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0 whitespace-nowrap">Bidang</button>
+                    <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0 whitespace-nowrap">Bidang</button>
+                    <button class="bg-white p-3 md:p-4 rounded-lg shadow-md shrink-0 whitespace-nowrap">Bidang</button>
+                </div>
             </div>
-
+  
             <!-- Business Cards -->
-            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="p-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <!-- Business Card List -->
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
+                <a href="corp.html"
+                    class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
+                    <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />
+                    <h4 class="font-bold text-gray-700 text-lg mb-2">
+                        Nama Corp
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Bidang
+                    </p>
+                    <p class="text-gray-500">
+                        Domisili
+                    </p>
+                </a>
                 <a href="corp.html"
                     class="block bg-white p-4 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow duration-300">
                     <img alt="Company image" class="mx-auto mb-4 rounded-lg" src="assets/img/card-placeholder-sq.png" />

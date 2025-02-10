@@ -19,69 +19,105 @@
 
 <body class="bg-gray-200">
     <!-- Navbar -->
-    <nav class="bg-gray-800 rounded-full mx-auto my-4 px-6 py-5 flex items-center justify-between max-w-7xl">
-        <div class="flex items-center space-x-2">
-            <div class="bg-blue-600 p-2 rounded-md">
-                <i class="fas fa-project-diagram text-white"></i>
+    <nav class="bg-gray-800 m-3 rounded-xl sm:hidden fixed bottom-0 left-0 right-0 flex items-center justify-around py-3 z-50">
+        <a href="/explore.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-search"></i>
+            <span class="text-xs">Eksplore</span>
+        </a>
+        <a href="/service.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-tools"></i>
+            <span class="text-xs">Layanan</span>
+        </a>
+        <a href="/index.html" class="flex flex-col items-center text-blue-500">
+            <div class="bg-blue-600 p-3 rounded-full">
+                <i class="fas fa-home text-white"></i>
             </div>
-            <a class="text-white font-semibold" href="/index.html">OptiBiz</a>
+            <span class="text-xs font-semibold">Home</span>
+        </a>
+        <a href="/about.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-info-circle"></i>
+            <span class="text-xs">Tentang</span>
+        </a>
+        <a href="/login.html" class="flex flex-col items-center text-gray-400 hover:text-white">
+            <i class="fas fa-user"></i>
+            <span class="text-xs">Login</span>
+        </a>
+    </nav>
+
+    <!-- Back and Share Buttons -->
+    <nav class="bg-gray-800 sm:hidden rounded-full m-3 fixed top-0 left-0 right-0 flex items-center justify-between py-3 px-4 shadow-lg z-50">
+        <!-- Back Button -->
+         <button onclick="goBack()" class="flex items-center text-gray-400 hover:text-white">
+            <i class="fas fa-arrow-left text-xl"></i>
+        </button>
+    
+        <!-- Share Button -->
+         <button onclick="sharePage()" class="flex items-center text-gray-400 hover:text-white">
+             <i class="fas fa-share-alt text-xl"></i>
+         </button>
+         <script>
+             // Function to go back to the previous page
+             function goBack() {
+                 window.history.back();
+             }
+
+             // Function to share the current page
+             function sharePage() {
+                 if (navigator.share) {
+                     navigator.share({
+                         title: document.title,
+                         url: window.location.href
+                     }).then(() => {
+                         console.log('Page shared successfully');
+                     }).catch((error) => {
+                         console.error('Error sharing page:', error);
+                     });
+                 } else {
+                     alert('Share functionality is not supported in this browser.');
+                 }
+             }
+         </script>
+         <script>
+            // Function to go back to the previous page
+            function goBack() {
+                window.history.back();
+            }
+        
+            // Function to share the current page
+            function sharePage() {
+                if (navigator.share) {
+                    navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    }).then(() => {
+                        console.log('Page shared successfully');
+                    }).catch((error) => {
+                        console.error('Error sharing page:', error);
+                    });
+                } else {
+                    alert('Share functionality is not supported in this browser.');
+                }
+            }
+        </script>
+    </nav>
+
+    <!-- Full Navbar (Visible on medium and larger screens) -->
+    <nav class="hidden md:flex bg-gray-800 rounded-full mx-auto my-4 px-6 py-3 items-center justify-between max-w-7xl">
+        <div class="flex items-center">
+            <div class="">
+                <img src="/assets/img/OptiBiz logo pyramid trans.png" class="w-12 h-auto">
+                <!-- <i class="fas fa-project-diagram text-white"></i> -->
+            </div>
+            <a class="text-white font-semibold" href="index.html">OptiBiz</a>
         </div>
-        <div class="hidden md:flex space-x-6 text-gray-400">
+        <div class="flex space-x-6 text-gray-400">
             <a href="/explore.html" class="hover:text-white">Eksplore</a>
             <a href="/service.html" class="hover:text-white">Layanan</a>
             <a href="/about.html" class="hover:text-white">Tentang</a>
-            <div class="relative">
-                <script>
-                    function toggleLoginPopup() {
-                        const popup = document.getElementById("login-popup");
-                        popup.classList.toggle("hidden");
-                    }
-                    function closeLoginPopup(event) {
-                        const popup = document.getElementById("login-popup");
-                        const button = document.querySelector("button[onclick='toggleLoginPopup()']");
-
-                        // Jika klik di luar popup dan bukan pada tombol, sembunyikan popup
-                        if (!popup.contains(event.target) && !button.contains(event.target)) {
-                            popup.classList.add("hidden");
-                        }
-                    }
-
-                    // Tambahkan event listener pada document
-                    document.addEventListener("click", closeLoginPopup);
-                </script>
-                <!-- Foto profil default sebagai menu login jika sudah login-->
-                <!-- <button onclick="toggleLoginPopup()" class="focus:outline-none">
-                        <img src="https://via.placeholder.com/40" alt="Profil"
-                            class="w-10 h-10 rounded-full border-2 border-gray-600 hover:border-white">
-                    </button> -->
-                <button onclick="toggleLoginPopup()" class="hover:text-white">Login</button>
-
-                <!-- Popup Login -->
-                <div id="login-popup" class="z-50 hidden absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg p-6">
-                    <h2 class="text-lg font-semibold text-gray-700">Login</h2>
-                    <form action="/login" method="POST" class="mt-4">
-                        <div class="mb-4">
-                            <label for="usernameOrEmail" class="block text-gray-600">Username/Email</label>
-                            <input type="text" id="usernameOrEmail" name="usernameOrEmail" required
-                                class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="mb-4">
-                            <label for="password" class="block text-gray-600">Password</label>
-                            <input type="password" id="password" name="password" required
-                                class="w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <button type="submit"
-                                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none">
-                                Login
-                            </button>
-                            <a href="/register" class="text-blue-600 hover:underline">Register</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <a href="/login.html" class="hover:text-white">Login</a>
         </div>
     </nav>
+
     <!-- Hero Section -->
     <section class="relative">
         <img alt="Hand holding a smartphone displaying a rising graph" class="w-full h-96 object-cover" height="600"
@@ -148,8 +184,9 @@
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
-    <section class="bg-gradient-to-r from-teal-600 to-green-600 py-12">
+    <section class="bg-gradient-to-r from-teal-600 to-green-600 pt-12 pb-24">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-white mb-8">
                 Kontak Pemesanan
@@ -175,8 +212,9 @@
             </form>
         </div>
     </section>
+
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-8">
+    <footer class="bg-gray-800 text-gray-300 py-8 hidden sm:block">
         <div class="container mx-auto flex justify-between">
             <div>
                 <h4 class="text-lg font-bold mb-4">
@@ -184,17 +222,17 @@
                 </h4>
                 <ul>
                     <li>
-                        <a class="hover:text-white" href="#">
+                        <a class="hover:text-white" href="service/it-consult.html">
                             Konsultan IT
                         </a>
                     </li>
                     <li>
-                        <a class="hover:text-white" href="#">
+                        <a class="hover:text-white" href="service/digital-marketing.html">
                             Digital Marketing
                         </a>
                     </li>
                     <li>
-                        <a class="hover:text-white" href="#">
+                        <a class="hover:text-white" href="service/design.html">
                             Desain Grafis
                         </a>
                     </li>
